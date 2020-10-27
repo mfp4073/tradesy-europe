@@ -1,0 +1,89 @@
+.app-container {
+		margin: 0 auto;
+		padding: 0 1em;
+}
+
+.countries-container {
+    background: lightgrey;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.country_card {
+	flex: 1 0 500px;
+	box-sizing: border-box;
+	background: white;
+	margin: 15px auto;
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.country_card a {
+	color: black;
+	text-decoration: none;
+}
+
+.country_card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+
+.flag-cover {
+  display: block;
+  width: 100%;
+  height: 100px;
+  width: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+
+//mobile
+@media only screen and (max-width: 481px) {
+    .country_card {
+       max-width: calc(90%);
+    }
+}
+
+//tablet
+@media only screen and (min-width: 481px)  {
+    .country_card {
+        max-width: calc(40%);
+
+        .flag-cover{
+            width: auto;
+        }
+    }
+}
+
+//laptop
+@media only screen and (min-width: 769px)  {
+    .country_card {
+        max-width: calc(30%);
+
+        .flag-cover{
+            width: 200px;
+        }
+    }
+}
+
